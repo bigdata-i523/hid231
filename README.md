@@ -8,7 +8,7 @@
 ```
 owner:
     hid: 231
-    name: Karthik Vegi
+    name: Vegi, Karthik
     url: https://github.com/bigdata-i523/hid231
 ```
 
@@ -30,7 +30,7 @@ paper1:
 ```
 paper2:
    author: 
-   - Karthik Vegi
+   - Vegi, Karthik
    hid:
    - 231
    title: This is my paper about the other abc
@@ -48,7 +48,7 @@ paper2:
    type: project
    type: report
    author: 
-   - Karthik Vegi
+   - Vegi, Karthik
    hid:
    - 231
    title: Benchmarking a BigData Docker deployment
