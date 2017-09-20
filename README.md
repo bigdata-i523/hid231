@@ -12,7 +12,7 @@ owner:
 ```
 paper1:
    author: 
-   - Karthik Vegi
+   - Vegi, Karthik
    hid:
    - 231
    title: Using Big Data for Fact Checking
