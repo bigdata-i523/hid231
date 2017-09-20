@@ -36,8 +36,6 @@ paper2:
 
 # Project 
 
-Yet to announce 
-
 ```
 Project:
    type: project
