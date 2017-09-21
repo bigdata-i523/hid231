@@ -1,5 +1,5 @@
 
-# Important Deadlines
+# Deadlines
 
 * 10/09/17 Paper 1 due 9am
 * 11/06/17 Paper 2 due 9am
