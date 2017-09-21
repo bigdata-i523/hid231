@@ -1,16 +1,23 @@
 # Logistic
 
-* 08/21/17 Read the entire class overview section 
+* 08/25/17 Read the entire class overview section
+* 09/01/17 Created accounts on piazza, github, futuresystems.org and chameleoncloud.org
 
 # Theory
 
-* 08/22/17 - 08/23/17 Read and watched all videos in the Theory Introduction section
+* 09/01/17 Read the course introduction section
+* 09/02/17 - 09/03/17 Watched videos on Emerging Technologies and Data Deluge
+* 09/09/17 - 09/10/17 Watched videos on Jobs and Industrial Trends
+* 09/14/17 Watched video on Digital Disruption of Old Favorites
 
 # Practice
 
-* 08/25/17 Enabled Python 2 and 3 via pyenv on OSX
+* 09/01/17 Installed the virtual machine
+* 09/08/17 Enabled Python 2 and 3 via pyenv on VM
 
 # Writing
 
-* 08/26/17 Installed and Learned aquamacs
-* 00/01/17 Installed and Learned jabref
+* 09/01/17 Learnt Latex on sharelatex.com
+* 09/08/17 Finalized the topic for Paper 1: Using Big Data for Fact Checking
+* 09/15/17 Researched and read articles on using big data for fact checking
+* 09/21/17 Started with Paper 1
