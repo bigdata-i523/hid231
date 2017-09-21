@@ -1,6 +1,6 @@
 # Logistic
 
-* 08/25/17 Read the entire class overview section
+* 09/01/17 Read the entire class overview section
 * 09/01/17 Created accounts on piazza, github, futuresystems.org and chameleoncloud.org
 
 # Theory
