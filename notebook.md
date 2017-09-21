@@ -1,3 +1,10 @@
+
+# Important Deadlines
+
+* 10/09/17 Paper 1 due 9am
+* 11/06/17 Paper 2 due 9am
+* 12/04/17 Project due 9am
+
 # Logistic
 
 * 09/01/17 Read the entire class overview section
