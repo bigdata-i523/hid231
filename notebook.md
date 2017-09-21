@@ -12,7 +12,7 @@
 
 # Practice
 
-* 09/01/17 Installed the virtual machine
+* 09/01/17 Installed the ubuntu virtual machine
 * 09/08/17 Enabled Python 2 and 3 via pyenv on VM
 
 # Writing
