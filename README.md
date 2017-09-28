@@ -18,7 +18,7 @@ paper1:
    title: Using Big Data for Fact Checking
    abstract: This paper intends to discuss how Big Data can be used to spot fake news, bad data used by politicians, advertisers, and scientists
    url: https://github.com/bigdata-i523/hid231/paper1/paper1.pdf
-   type: Latex
+   type: latex
    status: In progress
 ```
    
@@ -33,7 +33,7 @@ paper2:
    title: Using Big Data to battle Air Pollution
    abstract: This paper will focus on how we can combat air pollution using the technology advancements in big data, cloud computing, and IOT
    url: https://github.com/bigdata-i523/hid231/paper2/paper2.pdf 
-   type: Latex
+   type: latex
    status: Not started
 ```
 
@@ -44,9 +44,12 @@ Project:
    type: project
    author: 
    - Vegi, Karthik
-   hid:
-   - 231
+   pid:
+   - 000
    title: TBD
    abstract: TBD 
+   URL: 
+   type: latex
+   status: not started
 ```
    
