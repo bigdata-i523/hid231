@@ -42,7 +42,6 @@ paper2:
 ```
 Project:
    type: project
-   type: report
    author: 
    - Vegi, Karthik
    hid:
