@@ -1,4 +1,10 @@
 
+# Location
+ 
+* Address: Bloomington IN, 2619 E 2nd Street
+* Latitude: 39.160941
+* Longitude: -86.497750
+
 # Deadlines
 
 * 10/09/17 Paper 1 due 9am
