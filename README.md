@@ -16,10 +16,14 @@ paper1:
    hid:
    - 231
    title: Using Big Data for Fact Checking
-   abstract: This paper intends to discuss how Big Data can be used to spot fake news, bad data used by politicians, advertisers, and scientists
+   abstract: >
+       This paper intends to discuss how Big Data can be used to spot
+       fake news, bad data used by politicians, advertisers, and
+       scientists. 
    url: https://github.com/bigdata-i523/hid231/paper1/report.pdf
    type: latex
    status: In progress
+   chapter: Media
 ```
    
 # Paper 2
