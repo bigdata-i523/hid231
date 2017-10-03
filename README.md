@@ -39,6 +39,7 @@ paper2:
    url: https://github.com/bigdata-i523/hid231/paper2/report.pdf 
    type: latex
    status: Not started
+   chapter: Media
 ```
 
 # Project 
