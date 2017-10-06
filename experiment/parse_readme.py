@@ -2,11 +2,6 @@ import yaml
 import sys
 from pprint import pprint
 
-def banner(msg):
-    print (79 * '#')
-    print ('#', msg)
-    print (79 * '#')
-
 # variables/counters declaration
 in_yaml = False
 content = []
@@ -43,9 +38,6 @@ try:
 
     d = yaml.load(s)
     print("The file is in a valid yaml format")
-
-    banner('yaml')
-    print (yaml.dump(d, default_flow_style=False))
 
 except Exception as e:
     print ("ERROR: The file is not in a valid yaml format")
