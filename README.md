@@ -36,7 +36,8 @@ paper2:
    - 231
    title: Using Big Data to battle Air Pollution
    abstract: >
-   This paper will focus on how we can combat air pollution using the technology advancements in big data, cloud computing, and IOT
+       This paper will focus on how we can combat air pollution using
+       the technology advancements in big data, cloud computing, and IOT 
    url: https://github.com/bigdata-i523/hid231/paper2/report.pdf 
    type: latex
    status: Not started
