@@ -22,7 +22,7 @@ paper1:
        scientists. 
    url: https://github.com/bigdata-i523/hid231/paper1/report.pdf
    type: latex
-   status: In progress
+   status: 60%
    chapter: Media
 ```
    
