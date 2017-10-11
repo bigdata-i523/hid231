@@ -18,6 +18,7 @@
 * 09/08/17 Meeting: Attended class meeting for residential students
 * 09/15/17 Meeting: Attended class meeting for residential students
 * 09/22/17 Meeting: Attended class meeting for residential students
+* 09/29/17 Meeting: Attended class meeting for residential students
 
 # Weeks with no progress
 08/21/17 - 08/31/17: Did not work as I was travelling on emergency
@@ -40,6 +41,7 @@
 
 * 09/01/17 Installed the ubuntu virtual machine
 * 09/08/17 Enabled Python 2 and 3 via pyenv on VM
+* 09/23/17 - 09/28/17 Practised Python 
 
 # Writing
 
@@ -48,3 +50,6 @@
 * 09/15/17 Installed and learnt how to use jabref
 * 09/21/17 Researched and read articles on using big data for fact checking
 * 09/22/17 - 09/25/17 Made progress on Paper 1
+* 09/24/17 - 09/27/17 Made progress on Paper1: 70%
+* 10/05/17 Made progress on Paper1: 80% 
+* 10/06/17 - 10/08/17 Completed Paper1
