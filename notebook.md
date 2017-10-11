@@ -49,7 +49,7 @@
 * 09/08/17 Finalized the topic for Paper 1: Using Big Data for Fact Checking
 * 09/15/17 Installed and learnt how to use jabref
 * 09/21/17 Researched and read articles on using big data for fact checking
-* 09/22/17 - 09/25/17 Made progress on Paper 1
+* 09/22/17 - 09/25/17 Made progress on Paper1
 * 09/24/17 - 09/27/17 Made progress on Paper1: 70%
 * 10/05/17 Made progress on Paper1: 80% 
 * 10/06/17 - 10/08/17 Completed Paper1
