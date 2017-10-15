@@ -1,0 +1,39 @@
+---
+Project:
+    URL: null
+    abstract: TBD
+    author:
+        - Vegi, Karthik
+    pid:
+        - 0
+    status: not started
+    title: TBD
+    type: latex
+owner:
+    hid: 231
+    name: Vegi, Karthik
+    url: https://github.com/bigdata-i523/hid231
+paper1:
+    abstract: "This paper intends to discuss how Big Data can be used to spot fake\
+        \ news, bad data used by politicians, advertisers, and scientists. \n"
+    author:
+        - Vegi, Karthik
+    chapter: Media
+    hid:
+        - 231
+    status: 100%
+    title: Using Big Data for Fact Checking
+    type: latex
+    url: https://github.com/bigdata-i523/hid231/paper1/report.pdf
+paper2:
+    abstract: "This paper will focus on how we can combat air pollution using the\
+        \ technology advancements in big data, cloud computing, and IOT \n"
+    author:
+        - Vegi, Karthik
+    chapter: Media
+    hid:
+        - 231
+    status: Not started
+    title: Using Big Data to battle Air Pollution
+    type: latex
+    url: https://github.com/bigdata-i523/hid231/paper2/report.pdf
