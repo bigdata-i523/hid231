@@ -19,6 +19,9 @@
 * 09/15/17 Meeting: Attended class meeting for residential students
 * 09/22/17 Meeting: Attended class meeting for residential students
 * 09/29/17 Meeting: Attended class meeting for residential students
+* 10/06/17 Meeting: No meeting, fall break
+* 10/13/17 Meeting: Attended class meeting for residential students
+* 10/20/17 Meeting: Attended class meeting for residential students
 
 # Weeks with no progress
 08/21/17 - 08/31/17: Did not work as I was travelling on emergency
@@ -41,7 +44,9 @@
 
 * 09/01/17 Installed the ubuntu virtual machine
 * 09/08/17 Enabled Python 2 and 3 via pyenv on VM
-* 09/23/17 - 09/28/17 Practised Python 
+* 09/13/17 Learnt Github command line
+* 09/23/17 - 09/28/17 Practised Python: basics, reading files, lists, dictionaries, and functions
+* 10/14/17 - 10/15/17 Practised Python: modules, classes, error handling, and list comprehensions
 
 # Writing
 
@@ -53,3 +58,4 @@
 * 09/24/17 - 09/27/17 Made progress on Paper1: 70%
 * 10/05/17 Made progress on Paper1: 80% 
 * 10/06/17 - 10/08/17 Completed Paper1
+* 10/23/17 - 10/26/17 Improvised Paper1
