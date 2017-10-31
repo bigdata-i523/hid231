@@ -22,10 +22,10 @@ paper2:
         technology advancements in big data, cloud computing, and IOT
     author:
         - Vegi, Karthik
-    chapter: Media
+    chapter: Environment
     hid:
         - 231
-    status: Not started
+    status: 20%
     title: Using Big Data to battle Air Pollution
     type: latex
     url: https://github.com/bigdata-i523/hid231/paper2/report.pdf
