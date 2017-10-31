@@ -22,6 +22,7 @@
 * 10/06/17 Meeting: No meeting, fall break
 * 10/13/17 Meeting: Attended class meeting for residential students
 * 10/20/17 Meeting: Attended class meeting for residential students
+* 10/20/17 Meeting: Did not attend
 
 # Weeks with no progress
 08/21/17 - 08/31/17: Did not work as I was travelling on emergency
