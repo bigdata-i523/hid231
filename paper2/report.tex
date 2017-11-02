@@ -31,7 +31,7 @@ Back in the year 1990, the job of a typical air quality scientist was to develop
 
 \section{Air Pollution as a Big Data Problem}
 The advent of {\em Big Data} and the technological advances changed the way the data is ingested and analyzed \cite{www-ibm1}. The network speeds have increased, wide range of sensors are available to collect data with a lot of precision which would feed the high speed data processing systems. Batch processing has become easier with {\em Hadoop} and {\em Map-Reduce}. The storage mechanisms have become cheaper and more disaster proof. \\
-{\em IBM} is helping Beijing combat air pollution by analyzing huge amounts of data using a data analysis platform {\em Green Horizons} \cite{www-huff}. IBM has signed up partnerships with different cities in China and India to deploy {\em Big Data Analytics}, {\em Machine Learning} and {\em Internet Of Things} to improve traffic, keep a check on the pollution from industrial machines and other pollution causing agents \cite{www-huff}. {\em IBM} will deploy sensors in various place to collect data in real-time and analyze previous weather forecasts, and build improved iterative models over time \cite{www-huff}. The system continuously streams data form the sensors and improves the forecast by learning over time using {\em Machine Learning} algorithms \cite{www-huff}. \\
+{\em IBM} is helping Beijing combat air pollution by analyzing huge amounts of data using a data analysis platform {\em Green Horizons} \cite{www-huff}. IBM has signed up partnerships with different cities in China and India to deploy {\em Big Data Analytics}, {\em Machine Learning} and {\em Internet Of Things} to improve traffic, keep a check on the pollution from industrial machines and other pollution causing agents \cite{www-huff}. {\em IBM} will deploy sensors in various place to collect data in real-time and analyze previous weather forecasts, and build improved iterative models over time \cite{www-huff}. The system continuously streams data form the sensors and improves the forecast by learning over time using {\em Machine Learning} algorithms \cite{www-huff}. Figure 1 shows the Green Horizons air quality management for Beijing.
 
 \begin{figure}
 \includegraphics[width=0.7\textwidth]{images/fig1.png}
@@ -43,6 +43,43 @@ While these initiatives help bring awareness about the seriousness of the issue,
 
 \section{Big Data Techniques to combat pollution}
 
+\subsection{Random Forest Approach for predicting air quality in Urban Sensing Systems}
+Air pollution in an urban setting is very important to monitor because of the population density. Air quality in these areas varies a lot in various parts of the city owing to traffic and presence of industries \cite{raq2016}. A random forest approach ingests data from meteorology, urban sensors, road information and real-time traffic and predicts the air quality with utmost precision \cite{raq2016}. Real-time air quality information consists of measuring the concentration of $PM_{2.5}$, $PM_{10}$, and $NO_{2}$ \cite{raq2016}. \\
+The {\em Air Quality Index} AQI is the measure that is used to understand how polluted the air is \cite{raq2016}. AQI is measured by reading the concentration of 6 pollutant gases namely, sulfur dioxide $SO_{2}$, nitrogen dioxide $NO_{2}$, air particles smaller than 10 $\mu$m $PM_{10}$, air particles smaller than 2.5 $\mu$m $PM_{2.5}$, carbon monoxide $CO$, and ozone $O_3$ \cite{raq2016}. Based on the level of AQI, the air quality is classified as shown in Figure 2. 
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{images/fig2.png}
+\caption{AQI classification \cite{raq2016}}
+\end{figure}
+
+{\em Traffic Congestion Status} TCS, explains the traffic status at the current hour \cite{raq2016}. Figure 3 shows how colors are used to represent the traffic congestion \cite{raq2016}.
+
+\begin{figure}
+\includegraphics[width=0.4\textwidth]{images/fig3.png}
+\caption{Traffic Congestion\cite{raq2016}}
+\end{figure}
+
+\subsection{RAQ Algorithm}
+The RAQ algorithm collects data from air monitoring station AQI, meteorology data MD, traffic congestion TCS, road information RI, and point of interest POI which is the specific location that someone is interested to visit \cite{raq2016}. The data refresh rate is one hour and the data is collected from different parts of the city which are divided in grids from $G_1$ to $G_n$ \cite{raq2016}. The data is divided into training and testing data sets to train the model and evaluate the model \cite{raq2016}. Figure 4 shows the structure of the data.
+
+\begin{figure}
+\includegraphics[width=0.7\textwidth]{images/fig4.png}
+\caption{Structure of RAQ data\cite{raq2016}}
+\end{figure}
+
+A decision tree is used to split and classify the data and the results are aggregated by collecting the data from all the sub-trees \cite{raq2016}. Figure 5 illustrates the procedure of RAQ.
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{images/fig5.png}
+\caption{Procedure of RAQ \cite{raq2016}}
+\end{figure}
+
+The {\em Random Forest} algorithm is employed using the tree type classifier to recursively partition the dataset and generate sub-trees and finally aggregate the results of each sub-tree \cite{raq2016}. Each sub-tress is constructed using {\em Bootstrap Aggregating} where each data set is divided into different buckets by using statistical samples \cite{raq2016}. Once the trees are constructed, each subset of data is fed into a decision tree and the estimated AQI index is calculated \cite{raq2016}. The final AQI index is determined as the maximum value out of all the individual values \cite{raq2016}. Figure 6 shows the step-by-step RAQ algorithm.
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{images/fig6.png}
+\caption{RAQ Algorithm{raq2016}}
+\end{figure}
 
 \section{Conclusion}
 
