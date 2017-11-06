@@ -26,7 +26,7 @@ paper2:
     chapter: Environment
     hid:
         - 231
-    status: 90%
+    status: 100%
     title: Using Big Data to Battle Air Pollution
     type: latex
     url: https://github.com/bigdata-i523/hid231/paper2/report.pdf
@@ -39,4 +39,4 @@ Project:
         - 0
     status: not started
     title: TBD
-    type: latex
+    type: project
