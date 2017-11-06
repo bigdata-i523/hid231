@@ -23,6 +23,7 @@
 * 10/13/17 Meeting: Attended class meeting for residential students
 * 10/20/17 Meeting: Attended class meeting for residential students
 * 10/20/17 Meeting: Did not attend
+* 10/27/17 Meeting: Attended class meeting for residential students
 
 # Weeks with no progress
 08/21/17 - 08/31/17: Did not work as I was travelling on emergency
@@ -60,3 +61,4 @@
 * 10/05/17 Made progress on Paper1: 80% 
 * 10/06/17 - 10/08/17 Completed Paper1
 * 10/23/17 - 10/26/17 Improvised Paper1
+* 10/28/17 - 10/31/17 Finished Paper1
