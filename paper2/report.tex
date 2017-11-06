@@ -34,7 +34,7 @@ The advent of {\em Big Data} and the technological advances changed the way the 
 {\em IBM} is helping Beijing combat air pollution by analyzing huge amounts of data using a data analysis platform {\em Green Horizons} \cite{www-huff}. IBM has signed up partnerships with different cities in China and India to deploy {\em Big Data Analytics}, {\em Machine Learning} and {\em Internet of Things} to improve traffic, keep a check on the pollution from industrial machines, and other pollution causing agents \cite{www-huff}. {\em IBM} will deploy sensors in various places to collect data in real-time and analyze previous weather forecasts, and build improved iterative models over time \cite{www-huff}. The system continuously streams data from the sensors and improves the forecast by learning over time using {\em Machine Learning} algorithms \cite{www-huff}. Figure 1 shows the Green Horizons air quality management for Beijing.
 
 \begin{figure}
-\includegraphics[width=0.7\textwidth]{images/fig1.png}
+\includegraphics[width=1.0\textwidth]{images/fig1.png}
 \caption{Green Horizons air quality management for Beijing \cite{www-huff}}
 \end{figure}
 
@@ -48,14 +48,14 @@ Air pollution in an urban setting is very important to monitor because of the po
 The {\em Air Quality Index} AQI is the measure that is used to understand how polluted the air is \cite{raq2016}. AQI is measured by reading the concentration of 6 pollutant gases namely, sulfur dioxide $SO_{2}$, nitrogen dioxide $NO_{2}$, air particles smaller than 10 $\mu$m $PM_{10}$, air particles smaller than 2.5 $\mu$m $PM_{2.5}$, carbon monoxide $CO$, and ozone $O_3$ \cite{raq2016}. Based on the level of AQI, the air quality is classified as shown in Figure 2. 
 
 \begin{figure}
-\includegraphics[width=0.5\textwidth]{images/fig2.png}
+\includegraphics[width=1.0\textwidth]{images/fig2.png}
 \caption{AQI classification \cite{raq2016}}
 \end{figure}
 
 {\em Traffic Congestion Status} TCS, explains the traffic status at the current hour \cite{raq2016}. Figure 3 shows how colors are used to represent the traffic congestion \cite{raq2016}.
 
 \begin{figure}
-\includegraphics[width=0.4\textwidth]{images/fig3.png}
+\includegraphics[width=1.0\textwidth]{images/fig3.png}
 \caption{Traffic Congestion\cite{raq2016}}
 \end{figure}
 
@@ -63,21 +63,21 @@ The {\em Air Quality Index} AQI is the measure that is used to understand how po
 The RAQ algorithm collects data from air monitoring station AQI, meteorology data MD, traffic congestion TCS, road information RI, and point of interest POI which is the specific location that someone is interested to visit \cite{raq2016}. The data refresh rate is one hour and the data is collected from different parts of the city which are divided in grids from $G_1$ to $G_n$ \cite{raq2016}. The data is divided into training and testing data sets to train the model and evaluate the model \cite{raq2016}. Figure 4 shows the structure of the data.
 
 \begin{figure}
-\includegraphics[width=0.7\textwidth]{images/fig4.png}
+\includegraphics[width=1.0\textwidth]{images/fig4.png}
 \caption{Structure of RAQ data\cite{raq2016}}
 \end{figure}
 
 A decision tree is used to split and classify the data and the results are aggregated by collecting the data from all the sub-trees \cite{raq2016}. Figure 5 illustrates the procedure of RAQ.
 
 \begin{figure}
-\includegraphics[width=0.5\textwidth]{images/fig5.png}
+\includegraphics[width=1.0\textwidth]{images/fig5.png}
 \caption{Procedure of RAQ \cite{raq2016}}
 \end{figure}
 
 The {\em Random Forest} algorithm is employed using the tree type classifier to recursively partition the dataset and generate sub-trees and finally aggregate the results of each sub-tree \cite{raq2016}. Each sub-tress is constructed using {\em Bootstrap Aggregating} where each data set is divided into different buckets by using statistical samples \cite{raq2016}. Once the trees are constructed, each subset of data is fed into a decision tree and the estimated AQI index is calculated \cite{raq2016}. The final AQI index is determined as the maximum value out of all the individual values \cite{raq2016}. Figure 6 shows the step-by-step RAQ algorithm.
 
 \begin{figure}
-\includegraphics[width=0.5\textwidth]{images/fig6.png}
+\includegraphics[width=1.0\textwidth]{images/fig6.png}
 \caption{RAQ Algorithm \cite{raq2016}}
 \end{figure}
 
@@ -88,7 +88,7 @@ The {\em Random Forest} algorithm is employed using the tree type classifier to 
 Artificial Neural Network Model tries to solve the problem by simulating the functioning of brain and neurons \cite{gagan2017}. The model architecture is a function of a sigmoid \cite{gagan2017}. For this experiment, the air quality data was divided into training, test, and validation data with  split of 60, 20, and 20 with a back propagation network of two hidden layers \cite{gagan2017}. To ensure consistency, the air quality data for the training and test sets are derived from the same season \cite{gagan2017}. The air quality is forecast by looking at the historic data where the input and output are represented by the air quality data measured at different times \cite{gagan2017}. The model turns out to be reliable with a good prediction accuracy with the lowest mean square error of $3.7 \times 10^{-4}$ \cite{gagan2017}. The Artificial Neural Network Model is combined with {\em Markov Chains} to develop a new improved model with improved prediction accuracy where the ANN computes the primary values and the results are re-computed and improved by the markov transitional probability matrices \cite{gagan2017}. Figure 7 shows the Artificial Neural Network Model with two hidden layers. 
 
 \begin{figure}
-\includegraphics[width=0.5\textwidth]{images/fig7.png}
+\includegraphics[width=1.0\textwidth]{images/fig7.png}
 \caption{Artificial Neural Network(ANN) Model \cite{gagan2017}}
 \end{figure}
 
@@ -96,7 +96,7 @@ Artificial Neural Network Model tries to solve the problem by simulating the fun
 Least squares support vector machine is a supervised learning model used for classification and regression analysis which arrives at the solution by solving the data represented in the form of linear equations \cite{gagan2017}. For this model, the sample data was collected from 100 sensor points in different intervals of time and at different geographical locations that ranged from urban areas with population, areas near the airport, water surface areas like lakes, and sewage processing areas \cite{gagan2017}. The sample data was a good split with 80 percent collected from urban sewage area and the other data collected from air surface areas \cite{gagan2017}. The fluorescence content in the air was analyzed by a portable air quality measuring device developed in-house by Zhejiang University \cite{gagan2017}. The fluorescence data captured using the device is highly dimensional and non-linear and therefore data pre-processing is essential to bring the dimensions down to a manageable level \cite{gagan2017}. This eliminates the ambient noise and the temperature drift from the data \cite{gagan2017}. The algorithm predicts the regression model by looking at the training data for each cluster \cite{gagan2017}. Finally, the vector consine distance is used to classify the sample into clusters and the performance criterion such as {\em Root Mean Square Error}  and {\em Mean Absolute Error} are computed which demonstrate the efficiency of the algorithm \cite{gagan2017}. Figure 8 shows the pictorial representation of the algorithm.
 
 \begin{figure}
-\includegraphics[width=0.5\textwidth]{images/fig8.png}
+\includegraphics[width=1.0\textwidth]{images/fig8.png}
 \caption{Least squares Support Vector Machine Model \cite{gagan2017}}
 \end{figure}
 
