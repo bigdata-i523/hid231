@@ -26,6 +26,8 @@
 * 10/27/17 Meeting: Attended class meeting for residential students
 * 11/03/17 Meeting: Attended class meeting for residential students
 * 11/10/17 Meeting: Attended class meeting for residential students
+* 11/17/17 Meeting: Attended class meeting for residential students
+* 11/24/17 Meeting: No meeting, thanksgiving break
 
 # Weeks with no progress
 08/21/17 - 08/31/17: Did not work as I was travelling on emergency
