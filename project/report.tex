@@ -1,115 +1,158 @@
 \documentclass[sigconf]{acmart}
 
-\input{format/final}
+\input{format/i523}
 
 \begin{document}
-\title{Using Big Data to Battle Air Pollution}
+\title{Big Data Analytics on Food Products Around the World}
 
 \author{Karthik Vegi}
 \affiliation{%
   \institution{Indiana University Bloomington}
-  \streetaddress{2619 East 2nd Street, Apt 11}
-  \city{Bloomington, IN 47401} 
-  \country{USA}}
+  \streetaddress{College Mall Apartments}
+  \city{Bloomington} 
+  \state{Indiana} 
+  \postcode{47401}
+  }
 \email{kvegi@iu.com}
 
+\author{Nisha Chandwani}
+\orcid{1234-5678-9012}
+\affiliation{%
+  \institution{Indiana University Bloomington}
+  \streetaddress{Park Doral Apartments}
+  \city{Bloomington} 
+  \state{Indiana} 
+  \postcode{47405}
+}
+\email{nchandwa@iu.edu}
 
 % The default list of authors is too long for headers}
-\renewcommand{\shortauthors}{kvegi}
+\renewcommand{\shortauthors}{kvegi,nchandwa}
 
 \begin{abstract}
-We have come a long way from the stone age to build large scale industries, big cities, bullet trains, and a booming automobile industry. Technological and industrial advances are making our cities smarter by the day and yet a nagging side-effect is air pollution. Air pollution is not only creating local health hazards like respiratory and heart problems, but also directly leading to an increase in temperatures and contributing to global warming. We show how the advances in {\em Big Data}, {\em Cloud Computing}, and {\em Internet of Devices} can be used to combat air pollution.
+Food is one of the basic necessities of human-being. It helps us gain energy to recharge our body to do the daily activities like moving, playing, and thinking. From being a cave man to producing wide variety of foods, we have come a long way. The civilizations shaped the food habits of the world and there is a lot of variance in the food habits across countries. We analyze the {\em Open Food Facts} database that gathers information on food products from around the world to unearth some food habits of the world and we predict the food grade based on the nutrition facts of the food products.
 \end{abstract}
 
-\keywords{i523, hid231, big data, environment, air pollution, global warming}
+\keywords{i523, hid231, hid203, big data, food habits, food products, nutrition}
 
 \maketitle
 
 \section{Introduction}
-Air pollution is no longer a local problem. It is a global environmental issue which involves individual countries to come together and device measures to combat it \cite{www-ral}. It it causing about 3.7 million premature deaths worldwide from cardiovascular and respiratory diseases and also ruins the crops that feed the world \cite{www-ral}. Air pollution also has a direct effect on a number of environmental issues like global warming, depletion of ozone layer, acid rains, and impacts wild-life \cite{www-ral}. \\
-Back in the year 1990, the job of a typical air quality scientist was to develop atmospheric dispersion models to evaluate the air pollution caused by industries and make sure that it is within the permissible level suggested by the {\em Environmental Protection Agency} \cite{www-ibm1}. These models gather historic data of many years from airports and weather balloons to predict the pollution with the help of meteorology theory \cite{www-ibm1}. Although the methods used to derive the values were good enough, the limitations with respect to the technology posed a real challenge which took weeks to run the simulations, only to be cut-off in the middle due to power and storage issues \cite{www-ibm1}. The data processing engine was built on Sun-Solaris workstations with tapes handling the data storage \cite{www-ibm1}. The work-stations set up in major points in the country would communicate using a very slow network connection \cite{www-ibm1}. The data processing would be done locally and later written to all the servers which would then be split and distributed among many machines and consolidated in the end \cite{www-ibm1}. ``If only we had that much more data and that much more ability to handle it, we could iterate through the model at a much finer scale. Real-time data processing remained a pipe dream'' \cite{www-ibm1}. \\
+{\em Open Food Facts} is a non-profit initiative started by Stephane Gigandet and run by thousands of volunteers around the world. Any person around the world can contribute to the database by simply scanning a product using a mobile app which is made available to IOS and Android. This massive database of food products opens up a lot of opportunities to analyze the food products around the world and understand their food habits. We are particularly interested in the consumption of good nutrients and some bad nutrients.
 
-\section{Air Pollution as a Big Data Problem}
-The advent of {\em Big Data} and the technological advances changed the way the data is ingested and analyzed \cite{www-ibm1}. The network speeds have increased, wide range of sensors are available to collect data with a lot of precision which would feed the high speed data processing systems. Batch processing has become easier with {\em Hadoop} and {\em Map-Reduce}. The storage mechanisms have become cheaper and more disaster proof. \\
-{\em IBM} is helping Beijing combat air pollution by analyzing huge amounts of data using a data analysis platform {\em Green Horizons} \cite{www-huff}. IBM has signed up partnerships with different cities in China and India to deploy {\em Big Data Analytics}, {\em Machine Learning} and {\em Internet of Things} to improve traffic, keep a check on the pollution from industrial machines, and other pollution causing agents \cite{www-huff}. {\em IBM} will deploy sensors in various places to collect data in real-time and analyze previous weather forecasts, and build improved iterative models over time \cite{www-huff}. The system continuously streams data from the sensors and improves the forecast by learning over time using {\em Machine Learning} algorithms \cite{www-huff}. Figure \ref{fig:Fig1} shows the Green Horizons air quality management for Beijing \cite{www-huff}.
+\section{Nutrition Grade Labelling System}
+France recently took a decision to implement a nutri-score system which will use a color coding mechanism to label the food products that will help consumers know the nutrition grade of the product \cite{www-who}. The World Health Organization regional office for Europe as a part of its 5 year action plan from 2015-2020 recommends a labelling mechanism for the consumers to know about the quality of the food products at a first glance \cite{www-who}. This will not only make it easier for the consumers to pick healthier options but it will also regulate food manufacturers to resort to healthier ingredients instead of going for low cost artificial or less healthier ingredients \cite{www-who}.  \\
+
+France after United Kingdom became the second country to implement this system to indicate the main ingredients like fat, salt and sugar content in the food items \cite{www-who}. France made use of an evidence based system to study different labelling systems to arrive at the best one \cite{www-who}. By implementing this system, the World Health Organization will keep a check on the growing number of diet related diseases in the Europe region \cite{www-who}. Europe being the largest consumer of cheese wants to regulate the ingredients that go into the manufacturing process so that people are well informed about their food choices \cite{www-who}.
+
+\subsection{Nutrition Grade Prediction as a Big Data Problem}
+We build a predictive classification model to predict the food nutrition grade based on the ingredients of the food. The goal is to apply various machine learning algorithms to the problem at hand, measure the prediction accuracy to compare and contrast the different algorithms, and arrive at the best algorithm that suits the given data and the problem. This problem can be solved using Big Data and Machine Learning techniques given the size and the complexity of the data.
+
+\section{Machine Learning}
+Machine Learning is a field in which we train computers in a way that they can learn from the input data \cite{book-shai}. The ideology is that computers use the training data that is made available to them, learn from it, build a model and use this experience to build knowledge that can be applied on new unseen data \cite{book-shai}. A wonderful example to demonstrate machine learning is the application to detect spam emails where the machine builds knowledge from previously seen emails which are marked as spam, checks new emails to see if they match the historic spam emails and label them as spam or non-spam \cite{book-shai}. 
+
+\subsection{Types of Machine Learning Algorithms}
+There are primarily two types of machine learning algorithms which are descriptive models and predictive models \cite{book-shai}. A {\em Descriptive Model} is described as the analysis done and insights gained from slicing and dicing the data in new and interesting ways \cite{book-shai}. One example of descriptive model is patter discovery that is often used in market basket analysis where transnational purchase details are analyzed \cite{book-shai}. A {\em Predictive Model} on the other hand involves predicting one value using one or more variables \cite{book-shai}. The learning algorithms tried to build a model that captures the relationship between a response variables and dependent target variables \cite{book-tan}.
+
+\subsection{Types of Learning}
+{\em Unsupervised Learning} is the process where there is no explicit training data to learn from, so there is simply no mechanism where the machine can learn from previously available data \cite{book-shai}. The same email example can be looked at in a different way where we now want to do anomaly detection in emails \cite{book-shai}. Here the main goal is to detect unusual messages from the bunch of messages and we do not have experience of previous data \cite{book-shai}. \\
+
+{\em Supervised Learning} in contrast is the process of gaining knowledge or expertise from the training data which can be applied to future unseen data \cite{book-shai}. Here the model is first trained by using a bulk of training examples and this model is applied against testing data to measure the accuracy \cite{book-shai}. The variable that we need to predict is identified which is called the response variable and the variables that are used to predict the response variables, called the predictor variables are identified \cite{book-shai}. If the existing variables are not sufficiently giving the accuracy that is expected, a method called feature engineering is done where new variables are derived by combining existing variables \cite{book-shai}. 
+
+\section{Prediction Analysis}
+Prediction analysis is the process of working on  a large data set using a combination of statistical, data mining and machine learning algorithms to predict the outcome based on past data \cite{book-shai}.
+There are primarily two types of prediction analysis in machine learning, namely regression and classification \cite{book-tan}. In regression, we try to predict a continuous variable from the predictor variables \cite{book-tan}. A good example of regression is to predict the housing prices from different parameters like year of construction, location, amenities, number of bed rooms etc \cite{book-tan}. Here the response variable is continuous and it is not predefined \cite{book-tan}. Classification on the other hand tries to predict a categorical variable in which we assign each record with a predefined label or a class \cite{book-tan}. \\
+
+Classification is the task of assigning each data record to a predefined class \cite{book-tan}. In machine learning, classification is categorized as a supervised learning technique \cite{book-tan}. This problem has applications in various fields like spam detection, medical applications, astronomy and banking to identify fraudulent transactions from genuine transactions \cite{book-tan}. It is the task as coming up with a model which is essentially a function that maps every data record to a class label \cite{book-tan}. \\ 
+
+The task at hand is a classification problem since we are trying to predict the food nutrition grade of the products based on the ingredients that go into the product. For this problem we are considering only the data for the country France, since the nutrition grade is available for most food products from the country. Another reason is that France is the first countries in the region to come up with the idea of adding a color coded label to the food products mentioning the nutrition grade. In the subsequent sections we discuss the machine learning techniques used to solve this problem.
+
+\subsection{K Nearest Neighbors}
+
+\subsubsection{Overview} Some of the classification algorithms in machine learning work on the principle of eager learning that involves a two step process where first a model is built from the training data and the model is applied on testing data \cite{book-tan}. In contrast, K nearest neighbors is a lazy learning algorithm where the process of modeling the training data is not done until the test examples are classified \cite{book-tan}. {\em Rote Classifier} is a good example of lazy learning algorithm memorizes the entire training data to perform classification but has the drawback of not being able to map every test example against the training example \cite{book-tan}. K nearest neighbors algorithm overcomes this drawback by finding all the records that are closest or nearest to the training records \cite{book-tan}. \\
+
+The nearest neighbour puts each attribute list as a data point in the n-dimensional space, given n the number of attributes \cite{book-tan}. Once we have the training examples, we take each test example and compute its distance to the training example classes and assign a class label \cite{book-tan}. Any of the popular distance measures among Euclidean distance, Manhattan distance, Minkowski distance and Mahalanobis distance can be used \cite{book-tan}. The k denotes the k closest points to the test example \cite{book-tan}. Figure \ref{fig:Fig1} shows the structure of the data \cite{book-tan}.
 
 \begin{figure}
-\includegraphics[width=1.0\columnwidth]{images/fig1.png}
-\caption{Green Horizons air quality management for Beijing \cite{www-huff}}
+\includegraphics[width=1.0\textwidth]{images/fig1.png}
+\caption{K nearest neighbors algorithm\cite{book-tan}}
 \label{fig:Fig1}
 \end{figure}
 
-{\em IBM} is collaborating with the United Nations to push the use of technological advances by every country for the common good of the world \cite{www-huff}. More and more cities and countries are opening air quality data to public where you can get reports in real time \cite{www-ferro}. The {\em BreezoMeter} is the first mobile application that provides real-time information of the street's air quality information using geo-location maps \cite{www-ferro}. {\em Copernicus} is another monitoring service that ingests data from satellites and on site sensors on land, air and sea to provide continuous information to the users \cite{www-ferro}. {\em Open Data Week} is an intergovernmental organization where 34 states come together to bring reforms and discuss how to use technology and services like {\em Copernicus} that use {\em Big Data} to test prototypes of new products to ensure they operate within the permissible levels of pollution \cite{www-ferro}. \\
-While these initiatives help bring awareness about the seriousness of the issue, each state and country should take strict measures to bring out reforms that will help eradicate pollution. {\em Big Data} might never replace the environmental responsibility but it will help to plan the vision for environmental awareness and its tools make it easier to achieve the vision \cite{www-ferro}. These tools can also be used to gauge the alternative sources of energy and the feasibility of tapping into other natural resources ensuring responsible consumption of energy \cite{www-ferro}. For example, {\em IBM Bluemix} analyzed data from a steel industry and the analysis uncovered an interesting insight that the furnace wastes a lot of energy to offset the temperature of the smoke which resulted in optimizing its operation \cite{www-ibm1}.
+\subsubsection{Support in Python} 
+KNeighborsClassifier is available in the scikit learn python library. 
 
-\section{Big Data Techniques to combat pollution}
+\subsection{Logistic Regression}
+Logistic regression or logit regression is a special type of regression analysis where the response variable that we need to predict is a categorical variable \cite{book-tan}. Typically logistic regression models the response variable to take two values 1 or 0, pass or fail, win or lose \cite{book-tan}. Logistic regression that takes more than two values for the response variable is called multinomial logistic regression \cite{book-tan}. Here the probability of the response variable to take a categorical value is modelled as a function of the predictor variables \cite{book-tan}. \\
 
-\subsection{Random Forest Approach for predicting air quality in Urban Sensing Systems}
-Air pollution in an urban setting is very important to monitor because of the population density. Air quality in these areas varies a lot in various parts of the city owing to traffic and presence of industries \cite{raq2016}. A random forest approach ingests data from meteorology, urban sensors, road information, and real-time traffic and predicts the air quality with utmost precision \cite{raq2016}. Real-time air quality information consists of measuring the concentration of $PM_{2.5}$, $PM_{10}$, and $NO_{2}$ \cite{raq2016}. \\
-The {\em Air Quality Index} AQI is the measure that is used to understand how polluted the air is \cite{raq2016}. AQI is measured by reading the concentration of 6 pollutant gases namely, sulfur dioxide $SO_{2}$, nitrogen dioxide $NO_{2}$, air particles smaller than 10 $\mu$m $PM_{10}$, air particles smaller than 2.5 $\mu$m $PM_{2.5}$, carbon monoxide $CO$, and ozone $O_3$ \cite{raq2016}. Based on the level of AQI, the air quality is classified as shown in Figure \ref{fig:Fig2} \cite{raq2016}. 
+Like a lot of machine learning algorithms, logistic regression works by making a lot of assumptions which should be taken care as a part of the data cleaning and transformation process \cite{book-shai}. It does not assume a linear relationship between the response variables and predictor variables \cite{book-shai}. Since it applies a log transformation on the predicted probabilities, it can handle a variety of relationship between the predictor variables \cite{book-shai}. If the predictor variables are multivariate normal, the algorithm achieves best result although it works even if they are not \cite{book-shai}. Stepwise method must be used in the logistic regression to ensure that we are neither overfitting nor underfitting the data \cite{book-shai}. A very important assumption to be noted in logistic regression is that the each attribute list must be independent, in the sense the data records must not be derived from a before-after setup experiment \cite{book-shai}. It also requires a decently large sample size to work on \cite{book-shai}. 
 
-\begin{figure}
-\includegraphics[width=1.0\columnwidth]{images/fig2.png}
-\caption{AQI classification \cite{raq2016}}
-\label{fig:Fig2}
-\end{figure}
+\subsubsection{Support for Python} LogisticRegression is available in the scikit learn python library.
 
-{\em Traffic Congestion Status} TCS, explains the traffic status at the current hour \cite{raq2016}. Figure \ref{fig:Fig3} shows how colors are used to represent the traffic congestion \cite{raq2016}.
+\subsection{Random Forest Classifier}
+Random forest is a ensemble classification algorithm which is very powerful \cite{book-tan}. Ensemble method is a special process to improve the accuracy of the prediction \cite{book-tan}. The classification algorithms we have seen so far predict the response variable using a single classifier on the test data but ensemble methods use multiple classfiers in tandem and aggregate the predictions to boost the accuracy by a huge margin \cite{book-tan}. Using a combination method, the ensemble method derives a set of base classifiers from the training data and on each iteration takes a vote of all the base classifiers to arrive at a result \cite{book-tan}. \\
 
-\begin{figure}
-\includegraphics[width=1.0\columnwidth]{images/fig3.png}
-\caption{Traffic Congestion\cite{raq2016}}
-\label{fig:Fig3}
-\end{figure}
+Random forest is an ensemble method which works very well for classification problems \cite{book-tan}. It combines the predictions made by multiple classifiers where each classifier independently works on the training data and casts its vote \cite{book-tan}. Unlike methods like AdaBoost which generates values based on independent random vectors using a varied probability distribution, random forest generates values based on fixed probability distribution \cite{book-tan}. 
 
-\subsection{RAQ Algorithm}
-The RAQ algorithm collects data from air monitoring station AQI, meteorology data MD, traffic congestion TCS, road information RI, and point of interest POI which is the specific location that someone is interested to visit \cite{raq2016}. The data refresh rate is one hour and the data is collected from different parts of the city which are divided in grids from $G_1$ to $G_n$ \cite{raq2016}. The data is divided into training and testing data sets to train the model and evaluate the model \cite{raq2016}. Figure \ref{fig:Fig4} shows the structure of the data \cite{raq2016}.
+\subsubsection{Rationale for Random Forest}
+Consider an example, where we have 25 base classifiers and each base classifier has an error rate of 0.35 \cite{book-tan}. As discussed, the random forest takes the majority vote given by the base classifiers \cite{book-tan}. The model makes a wrong prediction if half or more base classifiers predict wrong, if not the accuracy is improved with an error rate of 0.06 which is far better than using just a single classifier \cite{book-tan}.
 
-\begin{figure}
-\includegraphics[width=1.0\columnwidth]{images/fig4.png}
-\caption{Structure of RAQ data\cite{raq2016}}
-\label{fig:Fig4}
-\end{figure}
+\subsubsection{Support for Python} RandomForestClassifier is available in the scikit learn python library.
 
-A decision tree is used to split and classify the data and the results are aggregated by collecting the data from all the sub-trees \cite{raq2016}. Figure \ref{fig:Fig5} illustrates the procedure of RAQ \cite{raq2016}.
+\subsection {Algorithm and Methodology}
 
-\begin{figure}
-\includegraphics[width=1.0\columnwidth]{images/fig5.png}
-\caption{Procedure of RAQ \cite{raq2016}}
-\label{fig:Fig5}
-\end{figure}
+\subsection{Python Packages Used}
+The following Python packages were used to solve the classification problem: \\
+{\em Pandas} \\
+{\em Matplotlib} \\
+{\em Seaborn} \\
+{\em Scikit-learn} \\
+{\em Scipy} \\
 
-The {\em Random Forest} algorithm is employed using the tree type classifier to recursively partition the dataset and generate sub-trees and finally aggregate the results of each sub-tree \cite{raq2016}. Each sub-tress is constructed using {\em Bootstrap Aggregating} where each data set is divided into different buckets by using statistical samples \cite{raq2016}. Once the trees are constructed, each subset of data is fed into a decision tree and the estimated AQI index is calculated \cite{raq2016}. The final AQI index is determined as the maximum value out of all the individual values \cite{raq2016}. Figure \ref{fig:Fig6} shows the step-by-step RAQ algorithm \cite{raq2016}.
+\subsection{Data}
+Number of examples: 123,961 \\
+Number of variables: 12 \\
+Response variables: {\em Nutrition Grade} \\
+Predictor variables: {\em Energy per 100g, Fat per 100g, Saturated Fat per 100g, Carbohydrates per 100g, Sugars per 100g, Fiber per 100g, Proteins per 100g, Salt per 100g, Trans-fat per 100g, Sodium per 100g}
 
-\begin{figure}
-\includegraphics[width=1.0\columnwidth]{images/fig6.png}
-\caption{RAQ Algorithm \cite{raq2016}}
-\label{fig:Fig6}
-\end{figure}
+\subsection{Data Cleaning and Transformation}
+Step 1: \\
+We first check the data value counts for each country. United States, France, Switzerland, Germany and Spain come as the top 5 countries with most data. Since the food nutrition grade was implemented in France, it has most products with the data available so for this classification problem we use the data filtered on France. 
 
-\section{Machine Learning models}
-{\em Machine Learning} deals with augmenting computers with the ability to learn from data and program themselves \cite{gagan2017}. These algorithms can be used to evaluate the air quality \cite{gagan2017}. 
+Step 2: \\ Cleaning
+Handling missing values
+- why is it a problem
+- missing, missing at random
+- imputation: mean, mode,
+we got better results by dropping missing values
+Outlier treatment
 
-\subsection{Artificial Neural Network Model}
-Artificial Neural Network Model tries to solve the problem by simulating the functioning of brain and neurons \cite{gagan2017}. The model architecture is a function of a sigmoid \cite{gagan2017}. For this experiment, the air quality data was divided into training, test, and validation data with  split of 60, 20, and 20 with a back propagation network of two hidden layers \cite{gagan2017}. To ensure consistency, the air quality data for the training and test sets are derived from the same season \cite{gagan2017}. The air quality is forecast by looking at the historic data where the input and output are represented by the air quality data measured at different times \cite{gagan2017}. The model turns out to be reliable with a good prediction accuracy with the lowest mean square error of $3.7 \times 10^{-4}$ \cite{gagan2017}. The Artificial Neural Network Model is combined with {\em Markov Chains} to develop a new improved model with improved prediction accuracy where the ANN computes the primary values and the results are re-computed and improved by the markov transitional probability matrices \cite{gagan2017}. Figure \ref{fig:Fig7} shows the Artificial Neural Network Model with two hidden layers \cite{gagan2017}. 
+Step 3: \\ Transformation
+- why standardization of data is important (skewness)
+massive improvement in results after standardization
+random forest for missing values
+scaling
+standard scaler
 
-\begin{figure}
-\includegraphics[width=1.0\columnwidth]{images/fig7.png}
-\caption{Artificial Neural Network(ANN) Model \cite{gagan2017}}
-\label{fig:Fig7}
-\end{figure}
+Step 4: EDA \\
+box plots, inference from box plots
+correlation - multi-collinearity, 
+handling multi-collinearity - feature engineering,
+remove sodium
 
-\subsection{Least squares Support Vector Machine Model}
-Least squares support vector machine is a supervised learning model used for classification and regression analysis which arrives at the solution by solving the data represented in the form of linear equations \cite{gagan2017}. For this model, the sample data was collected from 100 sensor points in different intervals of time and at different geographical locations that ranged from urban areas with population, areas near the airport, water surface areas like lakes, and sewage processing areas \cite{gagan2017}. The sample data was a good split with 80 percent collected from urban sewage area and the other data collected from air surface areas \cite{gagan2017}. The fluorescence content in the air was analyzed by a portable air quality measuring device developed in-house by Zhejiang University \cite{gagan2017}. The fluorescence data captured using the device is highly dimensional and non-linear and therefore data pre-processing is essential to bring the dimensions down to a manageable level \cite{gagan2017}. This eliminates the ambient noise and the temperature drift from the data \cite{gagan2017}. The algorithm predicts the regression model by looking at the training data for each cluster \cite{gagan2017}. Finally, the vector consine distance is used to classify the sample into clusters and the performance criterion such as {\em Root Mean Square Error}  and {\em Mean Absolute Error} are computed which demonstrate the efficiency of the algorithm \cite{gagan2017}. Figure \ref{fig:Fig8} shows the pictorial representation of the algorithm \cite{gagan2017}.
 
-\begin{figure}
-\includegraphics[width=1.0\columnwidth]{images/fig8.png}
-\caption{Least squares Support Vector Machine Model \cite{gagan2017}}
-\label{fig:Fig8}
-\end{figure}
+\subsection{Sampling, Stratified sampling} 
+one
+
+
+Step 5: \\
+\begin{itemize}
+	\item Transformation: Join, filter, union, map and various other operations that can be performed on existing RDDs which result in a new RDD at the end of the operation, are referred to as transformations.
+	\item Action: Count, first, reduce and various other operations which evaluate an existing RDD and return values at the end of these operations are referred to as Actions.
+\end{itemize}
 
 \section{Conclusion}
-While the new age technologies have a big role to play in measuring, tracking, and keeping air pollution in check, each person should have individual environmental responsibility to make the world a better place to live in. {\em Internet of Things} and {\em Machine Learning} are augmenting the {\em Big Data} capabilities like never before. This ensures that we have more data points to work in a given time and continuous data streaming means more accurate real-time analytics with efficient {\em Machine Learning} algorithms. All these three technologies will continue to work in tandem to keep a check on air pollution and the imminent threats.
+
 
 \begin{acks}
 
