@@ -99,64 +99,79 @@ Consider an example, where we have 25 base classifiers and each base classifier 
 
 \subsubsection{Support for Python} RandomForestClassifier is available in the scikit learn python library.
 
-\subsection {Algorithm and Methodology}
+\section {Algorithm and Methodology}
 
-\subsection{Python Packages Used}
-The following Python packages were used to solve the classification problem: \\
-{\em Pandas} \\
-{\em Matplotlib} \\
-{\em Seaborn} \\
-{\em Scikit-learn} \\
-{\em Scipy} \\
-
-\subsection{Data}
+\subsection{Data set}
+For the classification problem, we selected the records for country France. \\ \\
 Number of examples: 123,961 \\
 Number of variables: 12 \\
 Response variables: {\em Nutrition Grade} \\
 Predictor variables: {\em Energy per 100g, Fat per 100g, Saturated Fat per 100g, Carbohydrates per 100g, Sugars per 100g, Fiber per 100g, Proteins per 100g, Salt per 100g, Trans-fat per 100g, Sodium per 100g}
 
-\subsection{Data Cleaning and Transformation}
-Step 1: \\
-We first check the data value counts for each country. United States, France, Switzerland, Germany and Spain come as the top 5 countries with most data. Since the food nutrition grade was implemented in France, it has most products with the data available so for this classification problem we use the data filtered on France. 
-
-Step 2: \\ Cleaning
-Handling missing values
-- why is it a problem
-- missing, missing at random
-- imputation: mean, mode,
-we got better results by dropping missing values
-Outlier treatment
-
-Step 3: \\ Transformation
-- why standardization of data is important (skewness)
-massive improvement in results after standardization
-random forest for missing values
-scaling
-standard scaler
-
-Step 4: EDA \\
-box plots, inference from box plots
-correlation - multi-collinearity, 
-handling multi-collinearity - feature engineering,
-remove sodium
-
-
-\subsection{Sampling, Stratified sampling} 
-one
-
-
-Step 5: \\
+\subsection{Python Packages Used}
+The following Python packages were used to solve the classification problem: \\
 \begin{itemize}
-	\item Transformation: Join, filter, union, map and various other operations that can be performed on existing RDDs which result in a new RDD at the end of the operation, are referred to as transformations.
-	\item Action: Count, first, reduce and various other operations which evaluate an existing RDD and return values at the end of these operations are referred to as Actions.
+	\item Pandas: Provides high performance data structures for data analysis and data munging
+	\item Matplotlib: Plotting library that helps embedding plots into applications using GUI 
+	\item Seaborn: Visualization package based on matplotlib used for drawing high level statistical graphics 
+	\item Scikit-learn: Toolbox with solid implementation of machine learning and other algorithms
+	\item Scipy: Package that supports scientific computing with modules for linear algebra and integration
 \end{itemize}
 
-\section{Conclusion}
+\subsection{Data Cleaning}
+\subsubsection{Step 1: Data Sparsity} 
+Data sparsity refers to the situation where a lot of attributes have missing values which is an advantage in some cases because you only need to store and analyze the data that is available to you and save on computation time and storage \cite{book-tan}. We first check the data value counts for each country. United States, France, Switzerland, Germany and Spain come as the top 5 countries with most data. Since the food nutrition grade was implemented in France, it has most products with the data available so for this classification problem we use the data filtered on France.
 
+\subsubsection{Step 2: Handling Missing Values}
+Missing values is a common scenario and they can be handled in different ways. You could choose to eliminate the data objects with missing values but at the expense of missing some critical analysis \cite{book-tan}. Estimating the missing values is also a good way to handle them, especially when the data comes from time series etc, where you could possibly interpolate the missing values from the ones that are closer to it \cite{book-tan}. Ignoring the missing values is another technique which can be applied for tasks like clustering where the similarity can be calculated using the attributes other than the missing ones \cite{book-tan}. \\
+
+The data set was first analyzed to check the missing values in all the columns. The threshold limit has been set at 60 percent. All the columns with missing values more than 60 percent were removed from the analysis to make the result more consistent. Once the columns were removed, the data set has to be re-indexed to maintain the order. Only the columns that are important for the prediction task has been retained from the original data set. In this case, all the ingredients which are primarily the predictor variables were included. The missing values in the response variable also need to be taken care of. Removing the records with missing values for the response variable proved to be the best option after trying out various things. \\
+
+Imputation was used to handle the null values in the predictor variables. Imputation can be done in a variety of ways with by imputing the missing values by calculating the mean and the mode or just replacing them with 0. Since all the predictor variables have numeric values, all the null values have been replaced with 0. To ensure the imputation process has been done correctly, the sum of missing values is calculated.
+
+\subsubsection{Step 3: Outlier Treatment}
+Outliers are data objects with quite distinct characteristics from the other data records \cite{book-tan}. There is a considerable difference between anomalies and outliers, where anomalies refer to data records that have bad data which is noise and need to be ignored, anomalies often contain interesting aspects and can lead to some good analysis \cite{book-tan}. In applications like {\em Fraud Detection}, anomalies could be of utmost importance \cite{book-tan}. The outliers in the data have been looked at by using box plots and have been handled as a part of the data cleaning process.
+
+\subsection{Exploratory Data Analysis}
+For exploratory data analysis, we used the Seaborn package along with Matplotlib for visualizations. The measure of spread that is the range and variance of the values is a good way to understand the different aspects of the predictor variables. Box-plots are a method of visualization to look at the distribution of values for a numerical attribute \cite{book-tan}. The box plots show the percentiles where the lower and upper ends of the box indicate $25^{th}$ and $75^{th}$ percentile, the line inside the box indicates the $50^{th}$ percentile, the tails indicate the $10^{th}$ and $90^{th}$ percentile respectively \cite{book-tan}. \\
+
+\subsubsection{Bi-variate box-plots} Bi-variate box-plots go beyond uni-variate box plots by showing the relationship between the predictor variable and the response variable \cite{book-tan}. We look at the bi-variate box-plots for each of the important predictor variables namely saturated fat, polyunsaturated fat, sugars and salt and the response variable which is the nutrition grade. Figure \ref{fig:Fig2} shows the bi-variate box plots. \\
+
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{images/fig2.png}
+\caption{Bi-variate box plots \cite{code-base}}
+\label{fig:Fig2}
+\end{figure}
+
+By looking at the box plots, we can understand some important aspects of how the response variable is related to the predictor variables. We see that as the saturated fat content increases, the food grade decreases and as the polyunsaturated fat content increases the nutrition grade is better. When the sugar levels increase the health quotient of the food comes down and the energy levels behave in a interesting manner where the energy for the nutrition grade A is higher, the energy slightly increases with the nutrition grade. While increase in energy does not necessarily imply that the nutrition quality is high because there are a lot of instant energy foods that have a lot of additives but they are often rated low when it comes to health. \\
+
+\subsubsection{Correlation} Correlation between data objects is the measure of the linear relationship between the attributes of the object that are continuous variables \cite{book-tan}. Correlation analysis is the process of finding of the correlations between the different predictor variables and helps find collinearity problem \cite{book-shai}. The relationship could be either linear or non-linear given the data \cite{book-tan}. The correlation coefficient can range anywhere between -1 and 1, where 1 indicates a positive correlation and -1 indicates negative correlation \cite{book-shai}. Correlation plot visually shows the correlation coefficient between the variables in a nicely laid out plot. Figure \ref{fig:Fig3} shows the correlation plot. \\
+
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{images/fig3.png}
+\caption{Correlation Plot \cite{code-base}}
+\label{fig:Fig3}
+\end{figure}
+
+By looking at the correlation plot, we can see that sugars, fat, energy are positively in correlation with the nutrition grade. They will play an important role in the prediction algorithm. Also, sodium and salt are highly correlated with each other and this may lead to collinearity problem if not handled. Collinearity is the state where the independent variables are highly correlated with each other which can add a lot of noise to the data \cite{www-coll}. Some of the problems because of collinearity are that the regression coefficient may not be estimated correctly and also makes it very difficult to explain the response variables using the predictor variables \cite{www-coll}. So we remove sodium from the predictor variables and proceed to the next step.
+
+\subsubsection{Data Transformation} 
+Data transformation refers to the transformation that is applied to the variables \cite{book-tan}. For each data object, we apply a transformation function to all the attributes of the object to ensure that the attributes do not have a lot of variance in the data \cite{book-tan}. This process is also called standardization since we are applying a standard function to make sure all the attributes fall within a given range \cite{book-tan}. There are different methods that can be applied to achieve scaling namely log transformation, absolute value, square root transformation \cite{book-tan}. \\
+
+We use the method called normalization where all the values fall in between the range 0 and 1. To achieve this, we use the prepossessing package from sklearn which provides utility functions and transformer classes to change raw data into a standard representation. A lot of machine learning algorithms work well on standard data. If some of the variables have extreme values, they might dominate the model function and might disturb the estimation parameter. \\
+
+There was a massive improvement in the prediction accuracy of the algorithms before and after data scaling which proves the importance of data standardization with respect to machine learning algorithms.
+
+\subsection{Data Sampling}
+
+
+\section{Conclusion}
+This concludes
 
 \begin{acks}
-
-The author would like to thank Dr. Gregor von Laszewski and the teaching assistants for their support and suggestions.
+This project was undertaken as a part of the course objective for I523: Big Data Applications and Analytics at Indiana
+University, Bloomington. We would like to thank Prof. Gregor
+von Laszewski and all the TAs for their help, support and suggestions. 
 
 \end{acks}
 
