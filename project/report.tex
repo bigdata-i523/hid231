@@ -22,7 +22,7 @@
   \streetaddress{Park Doral Apartments}
   \city{Bloomington} 
   \state{Indiana} 
-  \postcode{47405}
+  \postcode{47408}
 }
 \email{nchandwa@iu.edu}
 
@@ -145,7 +145,8 @@ For exploratory data analysis, we used the Seaborn package along with Matplotlib
 
 By looking at the box plots, we can understand some important aspects of how the response variable is related to the predictor variables. We see that as the saturated fat content increases, the food grade decreases and as the polyunsaturated fat content increases the nutrition grade is better. When the sugar levels increase the health quotient of the food comes down and the energy levels behave in a interesting manner where the energy for the nutrition grade A is higher, the energy slightly increases with the nutrition grade. While increase in energy does not necessarily imply that the nutrition quality is high because there are a lot of instant energy foods that have a lot of additives but they are often rated low when it comes to health. \\
 
-\subsubsection{Correlation} Correlation between data objects is the measure of the linear relationship between the attributes of the object that are continuous variables \cite{book-tan}. Correlation analysis is the process of finding of the correlations between the different predictor variables and helps find collinearity problem \cite{book-shai}. The relationship could be either linear or non-linear given the data \cite{book-tan}. The correlation coefficient can range anywhere between -1 and 1, where 1 indicates a positive correlation and -1 indicates negative correlation \cite{book-shai}. Correlation plot visually shows the correlation coefficient between the variables in a nicely laid out plot. Figure \ref{fig:Fig3} shows the correlation plot. \\
+\subsubsection{Correlation} 
+Correlation between data objects is the measure of the linear relationship between the attributes of the object that are continuous variables \cite{book-tan}. Correlation analysis is the process of finding of the correlations between the different predictor variables and helps find collinearity problem \cite{book-shai}. The relationship could be either linear or non-linear given the data \cite{book-tan}. The correlation coefficient can range anywhere between -1 and 1, where 1 indicates a positive correlation and -1 indicates negative correlation \cite{book-shai}. Correlation plot visually shows the correlation coefficient between the variables in a nicely laid out plot. Figure \ref{fig:Fig3} shows the correlation plot. \\
 
 \begin{figure}
 \includegraphics[width=1.0\textwidth]{images/fig3.png}
@@ -163,7 +164,7 @@ We use the method called normalization where all the values fall in between the 
 There was a massive improvement in the prediction accuracy of the algorithms before and after data scaling which proves the importance of data standardization with respect to machine learning algorithms.
 
 \subsection{Data Sampling}
-In a supervised machine learning approach, the performance of the model is trained on one sample of the data and later tested on a different data. A model is said to perform well only if it is able to generalize well on unseen data. Thus, in order to test the performance of the nutrition grade classifier, the data for the country France was divided into two samples, training and testing. There are various ways to achieve this split or sampling of the dataset. Some of these sampling methods are:
+In a supervised machine learning approach, the model is trained on one sample of the data and later tested on a different sample of the data. Thus, in order to test the performance of the nutrition grade classifier, the data for the country France was divided into two samples, training and testing. There are various ways to achieve this split or sampling of the data. Some of these sampling methods are:
 
 \begin{itemize}
 	\item Simple Random Sampling: This is one of the simplest sampling techniques. In this technique, every data point has an equal chance of being selected. In other words, it works similar to a lottery system where every outcome has an equal probability. The biggest advantage of this technique is the ease of implementation and its unbiased nature while generating the sample. However, random sampling might not always result in a sample that can represent the true population. It generally works well when we have huge data to sample from.
@@ -171,6 +172,16 @@ In a supervised machine learning approach, the performance of the model is train
 \end{itemize}
 
 For our classifer, we chose to divide the data for France into training and test samples using stratified sampling technique. The strata or groups were created based on the response variable, i.e., food grade. This ensured that the training and test data had the same proportion for each food grade.
+
+\subsection{Data Modeling}
+Once the data was divided into training and test data, the next step was to train different classifiers and tune their respective parameters for better accuracy. We implemented three different models for classifying the food grade. Each of these models along with their parameters are:
+
+\begin{itemize}
+	\item K Nearest Neighbors (kNN): For kNN, the grade of a food item in test data is classified by first finding the k most similar food items in the training data. It then takes vote (food grade label) from each of these neighbors and based on the majority vote, the food item in the test data is assigned a food grade. Thus, one of the most important parameter for kNN is k, i.e., the number of neighbors to consider from the training data. We tried different k values and found that k=3 gave the best accuracy.
+	\item Logistic Regression: For logistic regression, one of the important paramaters is penalty. This parameter specifies the kind of regularization to be applied. This parameter can take two possible values, $l_1$ regularization and $l_2$ regularization. Both these values penalize high magnitude of the co-efficients of the predictors in order to prevent the model from over-fitting. For our model, we have used $l_2$ regularization as it works well even in the presence of highly correlated features. 
+	\item Random Forest: For random forest, there are many parameters, such as the number of trees in the forest, the maximum depth of the trees, maximum number of features to consider at each split, the minimum number of samples required in a sub-tree to qualify for further split, the minimum number of samples required to qualify as a leaf node, etc. For our data, we have kept most of the models at their default values except for the number of estimators or trees in the forest. We have set this value to 100 as the classifier produced very high accuracy with 100 trees in the forest.
+\end{itemize}
+
 
 \section{Conclusion}
 This concludes
