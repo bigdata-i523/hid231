@@ -99,7 +99,22 @@ Consider an example, where we have 25 base classifiers and each base classifier 
 
 \subsubsection{Support for Python} RandomForestClassifier is available in the scikit learn python library.
 
-\section {Algorithm and Methodology}
+\section {Experiments and Results}
+
+\subsection{Algorithm}
+The problem at hand is to correctly identify the nutrition grade of the food item. The possible labels are, $a$ to $e$, with $a$ being the best and $e$ being the worst grade for a food item. For this task, we have used machine learning techniques that help in predicting the label of each food item. Before getting into the details of each step of the method, we first present a concise version of the algorithm used for this task:
+
+\begin{enumerate}
+  \item Select all the records for country, France. Drop records where nutrition grade is not populated.
+  \item Separate the predictors from the response variable in order to perform data cleaning and data transformation steps.
+  \item Check for missing values in the predictors obtained in the step above. Drop columns with more than 60\% missing values.
+   \item Impute the missing values with 0 for remaining columns.
+   \item After imputing the missing values, standardize all the numerical predictors using standard scaler.
+   \item Check for the correlation between different numerical predictors. Drop one predictors from each pair of predictors that show high correlation.
+   \item Combine the pre-processed predictors and the response variable in a single dataframe.
+   \item Divide the data obtained in step above into training and test data using stratified sampling.
+   \item Train different classifiers on the training data and check the performance of each classifier on the test data.
+\end{enumerate}
 
 \subsection{Data set}
 For the classification problem, we selected the records for country France. \\ \\
