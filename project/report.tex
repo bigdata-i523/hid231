@@ -59,7 +59,54 @@ Monounsaturated fats have a good effect on the body when taken within limit \cit
 Polyunsaturated fats have a good effect on the body when taken within limit \cite{www-health}. They help reduce the bad cholesterol levels in the blood and there by decrease the risk of heart diseases \cite{www-health}. They also provide some nutrients that are essential for the body \cite{www-health}. Soybean oil and sunflower oil are some of the sources for polyunsaturated fats \cite{www-health}.
 
 \subsection{Data Cleaning and Transformation}
-To make the analysis more interesting, the top 20 countries with most value counts for the attributes have been considered. The countries 
+To make the analysis more interesting, the top 20 countries with most value counts for the attributes have been considered. The countries with names combined with other countries were also cleaned in the process. The data set was analyzed was missing values and the attributes with more than 60 percent missing values were removed from the analysis to add consistency. Only the columns that are meaningful in the analysis were retained and the rest were removed from further analysis. \\
+
+We then display the top 5 countries as a pie-chart and the 5 countries are namely United States, France, Switzerland, Germany, and Spain as shown in Figure \ref{fig:Fig7}. 
+
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{images/fig7.png}
+\caption{Top 5 countries \cite{code-base}}
+\label{fig:Fig7}
+\end{figure}
+
+We then impute all the null values with zeroes and we then check the dietary fat content in the foods and check the top countries with fat content using a histogram. The analysis with respect to the fat countries is as follows \\
+
+\subsection{Data Analysis}
+The top 5 countries with most fat content in the food items are Serbia, United States, Switzerland, Germany, and Sweden as shown in Figure \ref{fig:Fig8}.
+	
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{images/fig8.png}
+\caption{Top 5 countries with most fat content \cite{code-base}}
+\label{fig:Fig8}
+\end{figure}
+
+The top 5 countries with most saturated fat content in the food items are Serbia, United States, Germany, France and Switzerland as shown in Figure \ref{fig:Fig9}
+	
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{images/fig9.png}
+\caption{Top 5 countries with most saturated fat content \cite{code-base}}
+\label{fig:Fig9}
+\end{figure}
+
+    
+The top 5 countries with most trans-fat content in the food items are United States, Brazil, Canada, Australia, Russia, and Serbia as shown in Figure \ref{fig:Fig10} \\
+	
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{images/fig10.png}
+\caption{Top 5 countries with most trans-fat content \cite{code-base}}
+\label{fig:Fig10}
+\end{figure}
+        
+The top 5 countries with most cholesterol content in the food items are United States, Canada, Portugal, Brazil, France, and Italy as shown in Figure \ref{fig:Fig11} \\
+	
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{images/fig11.png}
+\caption{Top 5 countries with most cholesterol content \cite{code-base}}
+\label{fig:Fig11}
+\end{figure}
+
+\section{Analysis of Sugar and Salt Content}
+
 \section{Nutrition Grade Labelling System}
 France recently took a decision to implement a nutri-score system which will use a color coding mechanism to label the food products that will help consumers know the nutrition grade of the product \cite{www-who}. The World Health Organization regional office for Europe as a part of its 5 year action plan from 2015-2020 recommends a labelling mechanism for the consumers to know about the quality of the food products at a first glance \cite{www-who}. This will not only make it easier for the consumers to pick healthier options but it will also regulate food manufacturers to resort to healthier ingredients instead of going for low cost artificial or less healthier ingredients \cite{www-who}.  \\
 
@@ -231,9 +278,30 @@ There are various evalution metrics for assessing the performance of classifiers
 For our model, we used accuracy as well as confusion matrix for evaluating the results. The confusion matrix did not show any serious issues for any of the classifiers. The accuracy for each of the three classifiers was:
 
 \begin{enumerate}
-  \item Logistic Regression: With $l_2$ penalty, the accuracy of logistic regression was 78.9\%
-  \item K Nearest Neighbors: With k as 3, the accuracy of kNN was 95.74\%
-  \item Random Forest: With number of trees as 100, the accuracy of random forest classifier was 99.68\%
+  \item Logistic Regression: With $l_2$ penalty, the accuracy of logistic regression was 78.9\%. Figure \ref{fig:Fig4} shows the confusion matrix. \\
+
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{images/fig4.png}
+\caption{Confusion matrix for Logistic Regression \cite{code-base}}
+\label{fig:Fig4}
+\end{figure}
+
+  \item K Nearest Neighbors: With k as 3, the accuracy of kNN was 95.74\%. Figure \ref{fig:Fig5} shows the confusion matrix. \\
+
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{images/fig5.png}
+\caption{Confusion matrix for K Nearest Neighbors \cite{code-base}}
+\label{fig:Fig5}
+\end{figure}
+
+  \item Random Forest: With number of trees as 100, the accuracy of random forest classifier was 99.68\%. Figure \ref{fig:Fig6} shows the confusion matrix. \\
+
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{images/fig6.png}
+\caption{Confusion matrix for Random Forest \cite{code-base}}
+\label{fig:Fig6}
+\end{figure}
+
 \end{enumerate}
 
 Thus, we obtained the best results with Random Forest classifier.
