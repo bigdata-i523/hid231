@@ -30,12 +30,12 @@ paper2:
     title: Using Big Data to Battle Air Pollution
     type: latex
     url: https://github.com/bigdata-i523/hid231/paper2/report.pdf
-Project:
+project:
     URL: null
     abstract: TBD
     author:
         - Vegi, Karthik
-    pid:
+    hid:
         - 0
     status: not started
     title: Big Data Analytics on Food Products around the world
