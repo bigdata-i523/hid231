@@ -30,7 +30,7 @@
 \renewcommand{\shortauthors}{kvegi, nchandwa}
 
 \begin{abstract}
-Food is one of the basic necessities of human-being. It helps us gain energy to recharge our body to do the daily activities like moving, playing, and thinking. From being a cave man to producing wide variety of foods, we have come a long way. The civilizations shaped the food habits of the world and there is a lot of variance in the food habits across countries. We analyze the {\em Open Food Facts} database that gathers information on food products from around the world to unearth some food habits of the world and we predict the food grade based on the nutrition facts of the food products.
+Food is one of the basic necessities of human-being. It helps us gain energy to recharge our body to do the daily activities like moving, playing, and thinking. From being a cave man to producing a wide variety of foods, we have come a long way. The civilizations shaped the food habits of the world and there is a lot of variance in the food habits across countries. We analyze the {\em Open Food Facts} database that gathers information on food products from around the world to unearth some food habits of the world and we predict the food grade based on the nutrition facts of the food products.
 \end{abstract}
 
 \keywords{i523, hid231, hid203, big data, food habits, food products, nutrition}
@@ -41,11 +41,11 @@ Food is one of the basic necessities of human-being. It helps us gain energy to 
 {\em Open Food Facts} is a non-profit initiative started by Stephane Gigandet and run by thousands of volunteers around the world. Any person around the world can contribute to the database by simply scanning a product using a mobile app which is made available to IOS and Android. This massive database of food products opens up a lot of opportunities to analyze the food products around the world and understand their food habits. We are particularly interested in the consumption of nutrients that come along with the food items across the world, the composition of different fat content, and the prediction of nutrition grade based on the nutrients.
 
 \section{Food Analysis: Importance and Related work}
-In recent times, more and more companies try to market their food as low-fat or low-calories in order to fool consumers into buying their products. The increasing concern of public health has led to a significant interest in detecting the health-related properties of food products  \cite{cifuentes2012food}. Thus, there is no question about the importance of analysis of the nutrition grade and food safety in today's world. The analysis of food requires more robust and efficient methodologies in order to ensure the quality and safety of the food products \cite{cifuentes2012food}. Previous methods based on the so-called wet-chemistry have now evolved into more powerful techniques which are used in the food laboratories These methods provide massive improvement in analytical accuracy thus expanding the limits of food applications \cite{cifuentes2012food}. The traditional methods of food analysis can be classified based on the underlying principle. Some of these categories are spectroscopic, biological, electrochemical, supercritical fluid chromatography \cite{cifuentes2012food}. All these techniques provide information about the sample under study and this information is derived from a specific physical-chemical interaction \cite{cifuentes2012food}. A different approach of analyzing and detecting the food quality is by using machine learning techniques. We will discuss one of these modern methods of food analysis which can be widely used across countries.
+In recent times, more and more companies try to market their food as low-fat or low-calories in order to fool consumers into buying their products. The increasing concern of public health has led to a significant interest in detecting the health-related properties of food products  \cite{cifuentes2012food}. Thus, there is no question about the importance of analysis of the nutrition grade and food safety in today's world. The analysis of food requires more robust and efficient methodologies in order to ensure the quality and safety of the food products \cite{cifuentes2012food}. Previous methods based on the so-called wet-chemistry have now evolved into more powerful techniques which are used in the food laboratories. These methods provide massive improvement in analytical accuracy thus expanding the limits of food applications \cite{cifuentes2012food}. The traditional methods of food analysis can be classified based on the underlying principle. Some of these categories are spectroscopic, biological, electrochemical, supercritical fluid chromatography \cite{cifuentes2012food}. All these techniques provide information about the sample under study and this information is derived from a specific physical-chemical interaction \cite{cifuentes2012food}. A different approach of analyzing and detecting the food quality is by using machine learning techniques. We will discuss one of these modern methods of food analysis which can be widely used across countries.
 
 
 \section{Analysis of Nutrients in Food}
-Fat is definitely a nutrient that the body needs and are essential to aid in cell growth, help with energy generation, maintaining body temperature, protect organs, help absorb other essential nutrients that aid in producing energy, improve blood cholesterol level, help reduce inflammation in case of injury, and help in storing energy that can be used for survival when you go without food for few days \cite{www-health}. But, we do need to keep a track of the consumption because anything that is remotely excess leads to a variety of serious health issues \cite{www-health}.  
+Fat is definitely a nutrient that the body needs and is essential nutrient that aids in cell growth, helps with energy generation, maintaining body temperature, protect organs, help absorb other essential nutrients that aid in producing energy, improve blood cholesterol level, help reduce inflammation in case of injury, and help in storing energy that can be used for survival when you go without food for few days \cite{www-health}. But we do need to keep a track of the consumption because anything that is remotely excess leads to a variety of serious health issues \cite{www-health}.  
 
 \subsection{Dietary Fats}
 There are different types of fat – some are good and some are bad and some needs to be taken within a certain limit \cite{www-health}. 
@@ -75,7 +75,7 @@ We then display the top 5 countries as a pie-chart and the 5 countries are namel
 
 We then impute all the null values with zeroes and we then check the dietary fat content in the foods and check the top countries with fat content using a histogram. The analysis with respect to the fat countries is as follows \\
 
-\subsection{Data Analysis}
+\subsection{Fat Content}
 The top 5 countries with most fat content in the food items are Serbia, United States, Switzerland, Germany, and Sweden as shown in Figure \ref{fig:Fig8}.
 	
 \begin{figure}
@@ -93,7 +93,7 @@ The top 5 countries with most saturated fat content in the food items are Serbia
 \end{figure}
 
     
-The top 5 countries with most trans-fat content in the food items are United States, Brazil, Canada, Australia, Russia, and Serbia as shown in Figure \ref{fig:Fig10} \\
+The top 5 countries with most trans-fat content in the food items are United States, Brazil, Canada, Australia, Russia, and Serbia as shown in Figure \ref{fig:Fig10}. \\
 	
 \begin{figure}
 \includegraphics[width=1.0\columnwidth]{images/fig10.png}
@@ -101,7 +101,7 @@ The top 5 countries with most trans-fat content in the food items are United Sta
 \label{fig:Fig10}
 \end{figure}
         
-The top 5 countries with most cholesterol content in the food items are United States, Canada, Portugal, Brazil, France, and Italy as shown in Figure \ref{fig:Fig11} \\
+The top 5 countries with most cholesterol content in the food items are United States, Canada, Portugal, Brazil, France, and Italy as shown in Figure \ref{fig:Fig11}. \\
 	
 \begin{figure}
 \includegraphics[width=1.0\columnwidth]{images/fig11.png}
@@ -109,10 +109,10 @@ The top 5 countries with most cholesterol content in the food items are United S
 \label{fig:Fig11}
 \end{figure}
 
-\section{Sugar and Salt}
+\subsection{Sugar and Salt Content}
 Although the body needs sugar, high intake of artificial and processed sugar is bad for health as it does not add any nutrients but only adds calories \cite{www-sugar}. It is always better to rely on the natural sugar that comes with fruits and milk \cite{www-sugar}. Artificial sugars tooth decay and diabetes \cite{www-sugar}. Just as fat, sodium which is the main source of iodine is essential for health although its intake should be within limit \cite{www-sugar}. Increase in intake of salt leads to blood pressure and has an effect on the heart \cite{www-sugar}. \\
 
-The top 5 countries with most sugar content in the food items are United States, Serbia, Switzerland, France, and Sweden as shown in Figure \ref{fig:Fig12} \\
+The top 5 countries with most sugar content in the food items are United States, Serbia, Switzerland, France, and Sweden as shown in Figure \ref{fig:Fig12}. \\
 	
 \begin{figure}
 \includegraphics[width=1.0\columnwidth]{images/fig12.png}
@@ -120,7 +120,7 @@ The top 5 countries with most sugar content in the food items are United States,
 \label{fig:Fig12}
 \end{figure} 
 
-The top 5 countries with most sodium content in the food items are United States, Hungary, Serbia, Sweden, and France as shown in Figure \ref{fig:Fig13} \\
+The top 5 countries with most sodium content in the food items are United States, Hungary, Serbia, Sweden, and France as shown in Figure \ref{fig:Fig13}. \\
 	
 \begin{figure}
 \includegraphics[width=1.0\columnwidth]{images/fig13.png}
