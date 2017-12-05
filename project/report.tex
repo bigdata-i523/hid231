@@ -44,7 +44,7 @@ Food is one of the basic necessities of human-being. It helps us gain energy to 
 In recent times, more and more companies try to market their food as low-fat or low-calories in order to fool consumers into buying their products. The increasing concern of public health has led to a significant interest in detecting the health-related properties of food products  \cite{cifuentes2012food}. Thus, there is no question about the importance of analysis of the nutrition grade and food safety in today's world. The analysis of food requires more robust and efficient methodologies in order to ensure the quality and safety of the food products \cite{cifuentes2012food}. Previous methods based on the so-called wet-chemistry have now evolved into more powerful techniques which are used in the food laboratories These methods provide massive improvement in analytical accuracy thus expanding the limits of food applications \cite{cifuentes2012food}. The traditional methods of food analysis can be classified based on the underlying principle. Some of these categories are spectroscopic, biological, electrochemical, supercritical fluid chromatography \cite{cifuentes2012food}. All these techniques provide information about the sample under study and this information is derived from a specific physical-chemical interaction \cite{cifuentes2012food}. A different approach of analyzing and detecting the food quality is by using machine learning techniques. We will discuss one of these modern methods of food analysis which can be widely used across countries.
 
 
-\section{Analysis of Fat content in Food}
+\section{Analysis of Nutrients in Food}
 Fat is definitely a nutrient that the body needs and are essential to aid in cell growth, help with energy generation, maintaining body temperature, protect organs, help absorb other essential nutrients that aid in producing energy, improve blood cholesterol level, help reduce inflammation in case of injury, and help in storing energy that can be used for survival when you go without food for few days \cite{www-health}. But, we do need to keep a track of the consumption because anything that is remotely excess leads to a variety of serious health issues \cite{www-health}.  
 
 \subsection{Dietary Fats}
@@ -68,7 +68,7 @@ To make the analysis more interesting, the top 20 countries with most value coun
 We then display the top 5 countries as a pie-chart and the 5 countries are namely United States, France, Switzerland, Germany, and Spain as shown in Figure \ref{fig:Fig7}. 
 
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig7.png}
+\includegraphics[width=1.0\columnwidth]{images/fig7.png}
 \caption{Top 5 countries \cite{code-base}}
 \label{fig:Fig7}
 \end{figure}
@@ -79,7 +79,7 @@ We then impute all the null values with zeroes and we then check the dietary fat
 The top 5 countries with most fat content in the food items are Serbia, United States, Switzerland, Germany, and Sweden as shown in Figure \ref{fig:Fig8}.
 	
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig8.png}
+\includegraphics[width=1.0\columnwidth]{images/fig8.png}
 \caption{Top 5 countries with most fat content \cite{code-base}}
 \label{fig:Fig8}
 \end{figure}
@@ -87,7 +87,7 @@ The top 5 countries with most fat content in the food items are Serbia, United S
 The top 5 countries with most saturated fat content in the food items are Serbia, United States, Germany, France and Switzerland as shown in Figure \ref{fig:Fig9}
 	
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig9.png}
+\includegraphics[width=1.0\columnwidth]{images/fig9.png}
 \caption{Top 5 countries with most saturated fat content \cite{code-base}}
 \label{fig:Fig9}
 \end{figure}
@@ -96,7 +96,7 @@ The top 5 countries with most saturated fat content in the food items are Serbia
 The top 5 countries with most trans-fat content in the food items are United States, Brazil, Canada, Australia, Russia, and Serbia as shown in Figure \ref{fig:Fig10} \\
 	
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig10.png}
+\includegraphics[width=1.0\columnwidth]{images/fig10.png}
 \caption{Top 5 countries with most trans-fat content \cite{code-base}}
 \label{fig:Fig10}
 \end{figure}
@@ -104,12 +104,29 @@ The top 5 countries with most trans-fat content in the food items are United Sta
 The top 5 countries with most cholesterol content in the food items are United States, Canada, Portugal, Brazil, France, and Italy as shown in Figure \ref{fig:Fig11} \\
 	
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig11.png}
+\includegraphics[width=1.0\columnwidth]{images/fig11.png}
 \caption{Top 5 countries with most cholesterol content \cite{code-base}}
 \label{fig:Fig11}
 \end{figure}
 
-\section{Analysis of Sugar and Salt Content}
+\section{Sugar and Salt}
+Although the body needs sugar, high intake of artificial and processed sugar is bad for health as it does not add any nutrients but only adds calories \cite{www-sugar}. It is always better to rely on the natural sugar that comes with fruits and milk \cite{www-sugar}. Artificial sugars tooth decay and diabetes \cite{www-sugar}. Just as fat, sodium which is the main source of iodine is essential for health although its intake should be within limit \cite{www-sugar}. Increase in intake of salt leads to blood pressure and has an effect on the heart \cite{www-sugar}. \\
+
+The top 5 countries with most sugar content in the food items are United States, Serbia, Switzerland, France, and Sweden as shown in Figure \ref{fig:Fig12} \\
+	
+\begin{figure}
+\includegraphics[width=1.0\columnwidth]{images/fig12.png}
+\caption{Top 5 countries with most sugar content \cite{code-base}}
+\label{fig:Fig12}
+\end{figure} 
+
+The top 5 countries with most sodium content in the food items are United States, Hungary, Serbia, Sweden, and France as shown in Figure \ref{fig:Fig13} \\
+	
+\begin{figure}
+\includegraphics[width=1.0\columnwidth]{images/fig13.png}
+\caption{Top 5 countries with most sugar content \cite{code-base}}
+\label{fig:Fig13}
+\end{figure} 
 
 \section{Nutrition Grade Labelling System}
 France recently took a decision to implement a nutri-score system which will use a color coding mechanism to label the food products that will help consumers know the nutrition grade of the product \cite{www-who}. The World Health Organization regional office for Europe as a part of its 5 year action plan from 2015-2020 recommends a labelling mechanism for the consumers to know about the quality of the food products at a first glance \cite{www-who}. This will not only make it easier for the consumers to pick healthier options but it will also regulate food manufacturers to resort to healthier ingredients instead of going for low cost artificial or less healthier ingredients \cite{www-who}.  \\
@@ -145,7 +162,7 @@ The task at hand is a classification problem since we are trying to predict the 
 The nearest neighbour puts each attribute list as a data point in the n-dimensional space, given n the number of attributes \cite{book-tan}. Once we have the training examples, we take each test example and compute its distance to the training example classes and assign a class label \cite{book-tan}. Any of the popular distance measures among Euclidean distance, Manhattan distance, Minkowski distance and Mahalanobis distance can be used \cite{book-tan}. The k denotes the k closest points to the test example \cite{book-tan}. Figure \ref{fig:Fig1} shows the structure of the data \cite{book-tan}.
 
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig1.png}
+\includegraphics[width=1.0\columnwidth]{images/fig1.png}
 \caption{K nearest neighbors algorithm\cite{book-tan}}
 \label{fig:Fig1}
 \end{figure}
@@ -225,7 +242,7 @@ For exploratory data analysis, we used the Seaborn package along with Matplotlib
 \subsubsection{Bi-variate box-plots} Bi-variate box-plots go beyond uni-variate box plots by showing the relationship between the predictor variable and the response variable \cite{book-tan}. We look at the bi-variate box-plots for each of the important predictor variables namely saturated fat, polyunsaturated fat, sugars and salt and the response variable which is the nutrition grade. Figure \ref{fig:Fig2} shows the bi-variate box plots. \\
 
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig2.png}
+\includegraphics[width=1.0\columnwidth]{images/fig2.png}
 \caption{Bi-variate box plots \cite{code-base}}
 \label{fig:Fig2}
 \end{figure}
@@ -236,7 +253,7 @@ By looking at the box plots, we can understand some important aspects of how the
 Correlation between data objects is the measure of the linear relationship between the attributes of the object that are continuous variables \cite{book-tan}. Correlation analysis is the process of finding of the correlations between the different predictor variables and helps find collinearity problem \cite{book-shai}. The relationship could be either linear or non-linear given the data \cite{book-tan}. The correlation coefficient can range anywhere between -1 and 1, where 1 indicates a positive correlation and -1 indicates negative correlation \cite{book-shai}. Correlation plot visually shows the correlation coefficient between the variables in a nicely laid out plot. Figure \ref{fig:Fig3} shows the correlation plot. \\
 
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig3.png}
+\includegraphics[width=1.0\columnwidth]{images/fig3.png}
 \caption{Correlation Plot \cite{code-base}}
 \label{fig:Fig3}
 \end{figure}
@@ -286,7 +303,7 @@ For our model, we used accuracy as well as confusion matrix for evaluating the r
   \item Logistic Regression: With $l_2$ penalty, the accuracy of logistic regression was 78.9\%. Figure \ref{fig:Fig4} shows the confusion matrix. \\
 
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig4.png}
+\includegraphics[width=1.0\columnwidth]{images/fig4.png}
 \caption{Confusion matrix for Logistic Regression \cite{code-base}}
 \label{fig:Fig4}
 \end{figure}
@@ -294,7 +311,7 @@ For our model, we used accuracy as well as confusion matrix for evaluating the r
   \item K Nearest Neighbors: With k as 3, the accuracy of kNN was 95.74\%. Figure \ref{fig:Fig5} shows the confusion matrix. \\
 
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig5.png}
+\includegraphics[width=1.0\columnwidth]{images/fig5.png}
 \caption{Confusion matrix for K Nearest Neighbors \cite{code-base}}
 \label{fig:Fig5}
 \end{figure}
@@ -302,7 +319,7 @@ For our model, we used accuracy as well as confusion matrix for evaluating the r
   \item Random Forest: With number of trees as 100, the accuracy of random forest classifier was 99.68\%. Figure \ref{fig:Fig6} shows the confusion matrix. \\
 
 \begin{figure}
-\includegraphics[width=1.0\textwidth]{images/fig6.png}
+\includegraphics[width=1.0\columnwidth]{images/fig6.png}
 \caption{Confusion matrix for Random Forest \cite{code-base}}
 \label{fig:Fig6}
 \end{figure}
@@ -320,6 +337,18 @@ University, Bloomington. We would like to thank Prof. Gregor
 von Laszewski and all the TAs for their help, support and suggestions. 
 
 \end{acks}
+
+\newpage
+\appendix 
+\section{Work Breakdown} 
+\begin{description} 
+\item[Dataset identification:] Karthik Vegi, Nisha Chandwani: work equally split between.
+\item[Requirement Gathering:] Karthik Vegi, Nisha Chandwani: work equally split between.
+\item[Learning Machine Learning Concepts:] Karthik Vegi,  Nisha Chandwani: work equally split between.
+\item[Data analysis and implementation of the Logistic Regression:] Karthik Vegi.
+\item[K nearest neighbors and Random Forest algorithms:] Nisha Chandwani
+\item[Writing the project report:] Karthik Vegi, Nisha Chandwani: work equally split between.
+\end{description} 
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
