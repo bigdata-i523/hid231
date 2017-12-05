@@ -33,7 +33,16 @@ paper2:
 project:
     review: Dec 4 2017 99%
     abstract: >
-        In this project, we will analyze the Open Food Facts database and predict the food grade based on the nutrition facts of the food products.
+        Open Food Facts is a non-prot initiative started by Stephane Gigandet
+and run by thousands of volunteers around the world. Any
+person around the world can contribute to the database by simply
+scanning a product using a mobile app which is made available to
+IOS and Android. is massive database of food products opens up
+a lot of opportunities to analyze the food products around the world
+and understand their food habits. We are particularly interested in
+the consumption of nutrients that come along with the food items
+across the world, the composition of dierent fat content, and the
+prediction of nutrition grade based on the nutrients.
     author:
         - Vegi, Karthik
     hid:
