@@ -33,7 +33,8 @@ paper2:
 project:
     URL: https://github.com/bigdata-i523/hid231/project/report.pdf
     abstract: >
-        In this project, we will analyze the Open Food Facts database and predict the food grade based on the nutrition facts of the food products.
+        In this project, we will analyze the Open Food Facts database 
+        and predict the food grade based on the nutrition facts of the food products.
     author:
         - Chandwani, Nisha
         - Vegi, Karthik
@@ -44,4 +45,3 @@ project:
     title: Big Data Analytics on Food Products Around the World
     type: project
     chapter: Lifestyle
-
