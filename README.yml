@@ -31,7 +31,6 @@ paper2:
     type: latex
     url: https://github.com/bigdata-i523/hid231/paper2/report.pdf
 project:
-    duplicate: True
     url: https://github.com/bigdata-i523/hid231/project/report.pdf
     abstract: >
         In this project, we will analyze the Open Food Facts database 
