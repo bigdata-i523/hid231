@@ -14,7 +14,6 @@ paper1:
         - 231
     status: Oct 29 17 100%
     title: Using Big Data for Fact Checking
-    type: latex
     url: https://github.com/bigdata-i523/hid231/paper1/report.pdf
 paper2:
     review: Nov 6 2017 100%
@@ -28,7 +27,6 @@ paper2:
         - 231
     status: 100%
     title: Using Big Data to Battle Air Pollution
-    type: latex
     url: https://github.com/bigdata-i523/hid231/paper2/report.pdf
 project:
     url: https://github.com/bigdata-i523/hid231/project/report.pdf
